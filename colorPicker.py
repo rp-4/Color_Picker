@@ -5,9 +5,12 @@ st = time.time()
 ##############################################
 
 def main():
-     while True:
-        time.sleep(0.5)
-        print(colorPick())
+    startColor = 0
+    while True:
+        color = colorPick()
+        if color != startColor:
+            print(color)
+            startColor = color
 
 def colorPick():
     x, y = pyautogui.position()
